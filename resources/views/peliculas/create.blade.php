@@ -4,7 +4,7 @@
 <div style="background: white;" class="container" >
 <div class="row">
 <div class="col-md-6">
-<form method="POST" action="{{ url('pelculas/store') }}" class="form-has-warning"">
+<form method="POST" action="{{ route('peliculas.store') }}" class="form-has-warning"">
 
 							{{ method_field('POST') }}
 							{{ csrf_field() }}				
@@ -16,17 +16,17 @@
     <div class="form-group">
       <label for="inputEmail" class="col-md-2 control-label">Nombre pelicula</label>
       <div class="col-md-10">
-        <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+        <input type="text" class="form-control" name="nombre" placeholder="Nombre">
       </div>
     </div>
-
-    <div class="form-group">
-      <label for="inputPassword" class="col-md-2 control-label">Año de estreno</label>
+  <br><br>
+      <div class="form-group">
+      <label for="inputYear_est" class="col-md-2 control-label">Año de estreno</label>
       <div class="col-md-10">
-        <input type="Año" class="form-control" id="inputAño" placeholder="Año de estreno">
+        <input type="text" class="form-control" name= "year_est" placeholder="Año de estreno">
       </div>
     </div>
-   
+<br><br>
     <div class="form-group">
       <label for="inputFile" class="col-md-2 control-label">File</label>
 
@@ -35,59 +35,67 @@
         <input type="file" id="inputFile" multiple="">
       </div>
     </div>
+ 
+<br><br>
 
     <div class="form-group">
-      <label for="textArea" class="col-md-2 control-label">Descripcion</label>
+      <label for="inputSipnosis" class="col-md-2 control-label">Sipnosis</label>
       <div class="col-md-10">
-        <textarea class="form-control" rows="1" id="Descripcion"></textarea>
-        <span class="help-block">descripcion de la pelicula maximo 255 caracteres</span>
+      <input type="text" class="form-control" name="sipnosis"  placeholder="Sipnosis">
       </div>
     </div> 
 
-    <div class="form-group">
-      <label for="inputSubtitulos" class="col-md-2 control-label">subtitulos</label>
-      <div class="col-md-10">
-        <input type="subtitulos" class="form-control" id="inputSubtitulos" placeholder="subtitulos">
-      </div>
-    </div>
-</div>
-
-  <br><br><br>
-<div class="col-md-6">
+<br><br>
+<div class="form-group">
     <div class="form-group">
       <label for="inputIdioma" class="col-md-2 control-label">Idioma</label>
       <div class="col-md-10">
-        <input type="idioma" class="form-control" id="inputIdioma" placeholder="Idiomas">
+        <input type="text" class="form-control" name="idioma"  placeholder="Idiomas">
       </div>
     </div>
 
-
+<br><br>
  <div class="form-group">
-      <label for="inputIdioma" class="col-md-2 control-label">Calidad</label>
+      <label for="inputCalidad" class="col-md-2 control-label">Calidad</label>
       <div class="col-md-10">
-        <input type="idioma" class="form-control" id="inputIdioma" placeholder="Idiomas">
+        <input type="text" class="form-control" name="calidad_cal" id="inputIdioma" placeholder="Calidad">
       </div>
  </div>
 
 
+  <br><br>
+
  <div class="form-group">
-      <label for="inputIdioma" class="col-md-2 control-label">Director</label>
+      <label for="inputDirector" class="col-md-2 control-label">Director</label>
       <div class="col-md-10">
-        <input type="idioma" class="form-control" id="inputIdioma" placeholder="Idiomas">
+        <input type="" class="form-control" name="director"  placeholder="Director">
       </div>
      </div>
 
-  <div class="form-group">
-      <label for="inputIdioma" class="col-md-2 control-label">Genero</label>
-      <div class="col-md-10">
-        <input type="idioma" class="form-control" id="inputIdioma" placeholder="Idiomas">
-      </div>
-  </div>
+<br><br>
 
   <div class="form-group">
-      <label for="inputIdioma" class="col-md-2 control-label">Calificacion</label>
+      <label for="inputCalificacion" class="col-md-2 control-label">Calificacion</label>
       <div class="col-md-10">
-        <input type="idioma" class="form-control" id="inputIdioma" placeholder="Idiomas">
+        <input type="text" class="form-control" name="calificacion_clf" placeholder="Calificacion">
+      </div>
+  </div>
+</div>
+
+
+<br><br>
+  <div class="form-group">
+      <label for="inputGenero" class="col-md-2 control-label">Genero</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" name="genero_gen"  placeholder="Genero">
+      </div>
+  </div>
+  <br><br>
+ 
+<div class="form-group">
+      <label for="inputCategoria" class="col-md-2 control-label">Categorias</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" name="categoria_cat"  placeholder="Categorias">
       </div>
   </div>
 </div>
